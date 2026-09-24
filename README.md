@@ -2,7 +2,7 @@
 
 A single repository containing the three required capstone modules:
 * data_pipeline/ - web scraping -> cleaning -> fixed-rate currency conversion -> normalized SQLite -> SQL/pandas queries.
-* nalytics/ - one Titanic load -> cleaning -> leakage-safe classification -> imbalance comparison -> tuning -> regression -> saved complete pipeline.
+* analytics/ - one Titanic load -> cleaning -> leakage-safe classification -> imbalance comparison -> tuning -> regression -> saved complete pipeline.
 * support_assistant/ - policy corpus -> local embeddings -> ChromaDB retrieval -> LangGraph routing -> deterministic mock generation -> Pydantic -> FastAPI -> Docker.
 
 The repository intentionally keeps the required baseline free of paid services and API keys. The optional real-LLM path in the support assistant is disabled by default.
