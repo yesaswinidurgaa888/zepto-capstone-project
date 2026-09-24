@@ -299,7 +299,7 @@ MOCK_LLM=1
 for the required offline baseline.
 
 ---
-
+The containerized service was verified locally through Swagger UI at http://localhost:7860/docs, and the health endpoint returned HTTP 200 OK.
 ## Testing Performed
 
 The Dockerized FastAPI application was tested through Swagger UI.
