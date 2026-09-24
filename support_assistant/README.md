@@ -32,14 +32,13 @@ MOCK_LLM=1
 From the project root:
 
 ```powershell
-cd support_assistant
-python run_examples.py
+python -m support_assistant.run_examples
 ```
 
 To run the FastAPI application outside Docker:
 
 ```powershell
-python -m uvicorn main:app --reload --port 7860
+python -m uvicorn support_assistant.main:app --reload --port 7860
 ```
 
 The API is then available at:
@@ -235,13 +234,13 @@ Docker is used to package and run the Support Assistant as a containerized FastA
 From the project root:
 
 ```powershell
-docker build -t zepto-support-asistant -f .\support_assistant\Dockerfile .
+docker build -t zepto-support-assistant -f .\support_assistant\Dockerfile .
 ```
 
 ### Run the Container
 
 ```powershell
-docker run -d --name zepto-support-container -p 7860:7860 zepto-support-asistant:latest
+docker run -d --name zepto-support-container -p 7860:7860 zepto-support-assistant:latest
 ```
 
 The FastAPI service runs inside the container on port `7860`.
@@ -281,7 +280,7 @@ docker start zepto-support-container
 The locally built image is:
 
 ```text
-zepto-support-asistant:latest
+zepto-support-assistant:latest
 ```
 
 The application exposes:
@@ -299,10 +298,10 @@ MOCK_LLM=1
 for the required offline baseline.
 
 ---
-The containerized service was verified locally through Swagger UI at http://localhost:7860/docs, and the health endpoint returned HTTP 200 OK.
+The containerized service was verified locally using direct HTTP requests to the Dockerized FastAPI service, and the health endpoint returned HTTP 200 OK.
 ## Testing Performed
 
-The Dockerized FastAPI application was tested through Swagger UI.
+The Dockerized FastAPI application was tested using direct HTTP requests.
 
 ### Health Test
 
@@ -530,4 +529,4 @@ FastAPI REST API
 Docker Container
 ```
 
-The application has been tested successfully through the Dockerized FastAPI service using Swagger UI.
+The application has been tested successfully through the Dockerized FastAPI service using direct HTTP requests.

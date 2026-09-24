@@ -1,10 +1,9 @@
 # Zepto Data & AI Platform
 
 A single repository containing the three required capstone modules:
-
-* `data_pipeline/` — web scraping → cleaning → fixed-rate currency conversion → normalized SQLite → SQL/pandas queries.
-* `analytics/` — one Titanic load → cleaning → EDA → leakage-safe classification → imbalance comparison → tuning → regression → saved complete pipeline.
-* `support_assistant/` — policy corpus → local embeddings → ChromaDB retrieval → LangGraph routing → deterministic mock generation → Pydantic → FastAPI → Docker.
+* data_pipeline/ - web scraping -> cleaning -> fixed-rate currency conversion -> normalized SQLite -> SQL/pandas queries.
+* nalytics/ - one Titanic load -> cleaning -> leakage-safe classification -> imbalance comparison -> tuning -> regression -> saved complete pipeline.
+* support_assistant/ - policy corpus -> local embeddings -> ChromaDB retrieval -> LangGraph routing -> deterministic mock generation -> Pydantic -> FastAPI -> Docker.
 
 The repository intentionally keeps the required baseline free of paid services and API keys. The optional real-LLM path in the support assistant is disabled by default.
 
@@ -60,7 +59,7 @@ python analytics/01_eda.py
 python analytics/02_modeling.py
 ```
 
-The raw Titanic dataset is loaded from Seaborn exactly once, immediately saved as `analytics/titanic.csv`, and then all modeling work reads that committed CSV. Generated written results are stored in `EDA_REPORT.md` and `MODELING_REPORT.md`; supporting plots are under `analytics/plots/`.
+The raw Titanic dataset is loaded from Seaborn exactly once and saved as `analytics/titanic.csv`. The EDA script creates `analytics/cleaned_titanic.csv`, which is the dataset used by the modeling script. Generated written results are stored in `EDA_REPORT.md` and `MODELING_REPORT.md`; supporting plots are under `analytics/plots/`.
 
 ## 4. Run the support assistant
 
@@ -107,13 +106,13 @@ Docker is used to package and run the Support Assistant as a containerized FastA
 From the project root:
 
 ```powershell
-docker build -t zepto-support-asistant -f .\support_assistant\Dockerfile .
+docker build -t zepto-support-assistant -f .\support_assistant\Dockerfile .
 ```
 
 Run the container:
 
 ```powershell
-docker run -d --name zepto-support-container -p 7860:7860 zepto-support-asistant:latest
+docker run -d --name zepto-support-container -p 7860:7860 zepto-support-assistant:latest
 ```
 
 The FastAPI service is available at:
@@ -142,7 +141,7 @@ docker start zepto-support-container
 
 The Dockerized application uses `MOCK_LLM=1` for the required offline baseline.
 
-The containerized service was verified locally through Swagger UI, and the health endpoint returned HTTP 200 OK.
+The containerized service was verified locally using direct HTTP requests, and the health endpoint returned HTTP 200 OK.
 
 ## 6. Git workflow required by the assignment
 
@@ -173,7 +172,7 @@ The final repository should show at least two commits on the feature branch befo
 * [ ] Analytics report contains all required missing-value percentages, outlier counts, skewness, survival rates, exact six-column correlation matrix, two strongest correlations, four+ interpreted charts, and standardization check.
 * [ ] Three classifiers use the same stratified split and leakage-safe preprocessing.
 * [ ] Classification metrics, ROC/AUC, imbalance comparison, GridSearchCV and OOB score are recorded.
-* [ ] Fare regression includes MAE, RMSE, R², adjusted R² and residual interpretation.
+* [ ] Fare regression includes MAE, RMSE, R2, adjusted R2 and residual interpretation.
 * [ ] `best_pipeline.joblib` contains preprocessing + estimator together and reloads successfully.
 * [ ] All eight support documents are present.
 * [ ] ChromaDB embeddings and LangGraph three-node flow work in mock mode.
@@ -182,4 +181,3 @@ The final repository should show at least two commits on the feature branch befo
 * [ ] Two mock example responses are recorded by `run_examples.py`.
 * [ ] Dockerfile builds and serves the API locally.
 * [ ] Git history visibly contains the required feature branch and merge.
-

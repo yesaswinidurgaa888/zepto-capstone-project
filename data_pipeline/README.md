@@ -22,7 +22,7 @@ The scraper needs internet access. The database is regenerated from scratch by `
 ## Cleaning decisions
 
 - `price_gbp`: currency symbol is removed and the value is parsed as float. Numeric parse failures are median-imputed.
-- `rating`: English star words are mapped One–Five → 1–5. Unexpected numeric parse failures are median-imputed and rounded to an integer in the valid range.
+- `rating`: English star words are mapped One-Five -> 1-5. Unexpected numeric parse failures are median-imputed and rounded to an integer in the valid range.
 - `in_stock`: the availability text is converted to a boolean based on whether it contains `In stock`.
 - Rows are not silently discarded for ordinary numeric parse failures because the specification explicitly allows median imputation for numeric fields.
 - `price_inr` is always `price_gbp * 105.50`; this is the required artificial project baseline, not a live exchange rate.

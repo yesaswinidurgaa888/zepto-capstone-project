@@ -41,7 +41,7 @@ SQL: SELECT title, price_gbp FROM books WHERE price_gbp > 30 ORDER BY price_gbp 
                                                                                                                       The Most Perfect Thing: Inside (and Outside) a Bird's Egg      42.96
                                                                                                  Spark Joy: An Illustrated Master Class on the Art of Organizing and Tidying Up      41.83
                                                                                                                                                                  The Art Forger      40.76
-                                                                                                                        Worlds Elsewhere: Journeys Around Shakespeareâs Globe      40.30
+                                                                                                                          Worlds Elsewhere: Journeys Around Shakespeare's Globe      40.30
                                                                                                                        Layered: Baking, Building, and Styling Spectacular Cakes      40.11
                                                                                                                                                                     Soul Reader      39.58
                                                                                                                                                                        Security      39.25
@@ -73,7 +73,7 @@ SQL: SELECT title, rating, price_gbp FROM books ORDER BY rating DESC, price_gbp 
             Scott Pilgrim's Precious Little Life (Scott Pilgrim #1)       5      52.29
                                        We Love You, Charlie Freeman       5      50.27
                                         Private Paris (Private #10)       5      47.61
-            Worlds Elsewhere: Journeys Around Shakespeareâs Globe       5      40.30
+              Worlds Elsewhere: Journeys Around Shakespeare's Globe       5      40.30
                                                                Join       5      35.67
                                           Rip it Up and Start Again       5      35.02
                                                          Black Dust       5      34.53
@@ -171,7 +171,7 @@ The Inefficiency Assassin: Time Management Tactics for Working Smarter, Not Long
                                              Sapiens: A Brief History of Humankind       5   5721.265       History
                                                          Rip it Up and Start Again       5   3694.610         Music
                 #HigherSelfie: Wake Up Your Life. Free Your Soul. Find Your Tribe.       5   2438.105    Nonfiction
-                           Worlds Elsewhere: Journeys Around Shakespeareâs Globe       5   4251.650    Nonfiction
+                             Worlds Elsewhere: Journeys Around Shakespeare's Globe       5   4251.650    Nonfiction
                                                                     Sophie's World       5   1681.670    Philosophy
 
 
@@ -187,7 +187,7 @@ The Inefficiency Assassin: Time Management Tactics for Working Smarter, Not Long
                                              Sapiens: A Brief History of Humankind       5   5721.265       History
                                                          Rip it Up and Start Again       5   3694.610         Music
                 #HigherSelfie: Wake Up Your Life. Free Your Soul. Find Your Tribe.       5   2438.105    Nonfiction
-                           Worlds Elsewhere: Journeys Around Shakespeareâs Globe       5   4251.650    Nonfiction
+                             Worlds Elsewhere: Journeys Around Shakespeare's Globe       5   4251.650    Nonfiction
                                                                     Sophie's World       5   1681.670    Philosophy
 
 pd.merge result:
@@ -200,7 +200,7 @@ The Inefficiency Assassin: Time Management Tactics for Working Smarter, Not Long
                                              Sapiens: A Brief History of Humankind       5   5721.265       History
                                                          Rip it Up and Start Again       5   3694.610         Music
                 #HigherSelfie: Wake Up Your Life. Free Your Soul. Find Your Tribe.       5   2438.105    Nonfiction
-                           Worlds Elsewhere: Journeys Around Shakespeareâs Globe       5   4251.650    Nonfiction
+                             Worlds Elsewhere: Journeys Around Shakespeare's Globe       5   4251.650    Nonfiction
                                                                     Sophie's World       5   1681.670    Philosophy
 
 Equivalent: True

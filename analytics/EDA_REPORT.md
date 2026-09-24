@@ -55,7 +55,7 @@ max      1.000000    3.000000   80.000000    8.000000    6.000000  512.329200
 | column      |   missing_percent | strategy                                  |
 |:------------|------------------:|:------------------------------------------|
 | deck        |             77.22 | drop column (>30%; imputation unreliable) |
-| age         |             19.87 | median imputation (5–30%)                 |
+| age         |             19.87 | median imputation (5-30%)                 |
 | embarked    |              0.22 | drop affected rows (<5%)                  |
 | embark_town |              0.22 | drop affected rows (<5%)                  |
 
@@ -72,7 +72,7 @@ Cleaned shape: `(889, 14)`
 
 ## Survival-rate breakdowns
 
-Sex — female: **0.740**, male: **0.189**.
+Sex - female: **0.740**, male: **0.189**.
 
 By pclass:
 
@@ -84,14 +84,11 @@ By pclass:
 
 By sex and pclass:
 
-|               |   survival_rate |
-|:--------------|----------------:|
-| ('female', 1) |           0.967 |
-| ('female', 2) |           0.921 |
-| ('female', 3) |           0.500 |
-| ('male', 1)   |           0.369 |
-| ('male', 2)   |           0.157 |
-| ('male', 3)   |           0.135 |
+|    |   female |   male |
+|---:|---------:|-------:|
+|  1 |    0.967 |  0.369 |
+|  2 |    0.921 |  0.157 |
+|  3 |    0.500 |  0.135 |
 
 ### Two strongest absolute off-diagonal correlations
 
@@ -100,27 +97,27 @@ By sex and pclass:
 
 The correlation matrix contains exactly the six required columns; `adult_male` and `alone` are excluded.
 
-### Chart 1 — Survival by sex
+### Chart 1 - Survival by sex
 The survival rates differ substantially between the two sex categories. This indicates sex is strongly associated with the observed survival outcome in this dataset, although the chart is descriptive rather than causal.
 
-### Chart 2 — Survival by class and sex
+### Chart 2 - Survival by class and sex
 Survival varies across passenger classes within the sex groups. The combined view shows why looking at only one grouping can hide important differences between subgroups.
 
-### Chart 3 — Age and survival
+### Chart 3 - Age and survival
 The age distributions overlap considerably, but their medians and spreads can still differ. This suggests age may contribute information while not being sufficient by itself to separate survivors from non-survivors.
 
-### Chart 4 — Fare and survival
+### Chart 4 - Fare and survival
 Fare distributions differ between the observed survival groups, with the non-survivor group and survivor group showing different central tendencies. Because fare is related to passenger class, this relationship should be interpreted together with pclass rather than in isolation.
 
-### Chart 5 — Age, fare and survival
+### Chart 5 - Age, fare and survival
 The scatter plot combines two numeric variables with the survival label. It illustrates that the groups overlap, reinforcing the need for a multivariate model rather than a single-threshold rule.
 
 
-## Standardization sanity check — age
+## Standardization sanity check - age
 
 Before: mean=29.315152, std=12.984932. After: mean=0.000000, std=1.000000.
 
-## Standardization sanity check — fare
+## Standardization sanity check - fare
 
 Before: mean=32.096681, std=49.697504. After: mean=0.000000, std=1.000000.
 

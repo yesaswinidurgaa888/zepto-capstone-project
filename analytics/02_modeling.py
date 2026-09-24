@@ -28,7 +28,7 @@ warnings.filterwarnings("ignore")
 HERE = Path(__file__).resolve().parent
 PLOTS = HERE / "plots"
 PLOTS.mkdir(exist_ok=True)
-DATA = HERE / "titanic.csv"
+DATA = HERE / "cleaned_titanic.csv"
 
 FEATURES = ["pclass", "age", "sibsp", "parch", "fare", "sex", "embarked"]
 NUMERIC = ["pclass", "age", "sibsp", "parch", "fare"]
