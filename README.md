@@ -165,19 +165,19 @@ The final repository should show at least two commits on the feature branch befo
 
 ## 7. Final submission checklist
 
-* [ ] One public GitHub repository only.
-* [ ] Root `README.md` present.
-* [ ] `/data_pipeline` has the scraper, cleaning, SQLite schema, five SQL queries, outputs, and SQL/pandas JOIN comparison.
-* [ ] `/analytics/titanic.csv` exists after running `01_eda.py`.
-* [ ] Analytics report contains all required missing-value percentages, outlier counts, skewness, survival rates, exact six-column correlation matrix, two strongest correlations, four+ interpreted charts, and standardization check.
-* [ ] Three classifiers use the same stratified split and leakage-safe preprocessing.
-* [ ] Classification metrics, ROC/AUC, imbalance comparison, GridSearchCV and OOB score are recorded.
-* [ ] Fare regression includes MAE, RMSE, R2, adjusted R2 and residual interpretation.
-* [ ] `best_pipeline.joblib` contains preprocessing + estimator together and reloads successfully.
-* [ ] All eight support documents are present.
-* [ ] ChromaDB embeddings and LangGraph three-node flow work in mock mode.
-* [ ] Pydantic output has `answer`, `sources`, and `confidence`.
-* [ ] FastAPI `/ask` works.
-* [ ] Two mock example responses are recorded by `run_examples.py`.
-* [ ] Dockerfile builds and serves the API locally.
-* [ ] Git history visibly contains the required feature branch and merge.
+* [x] One public GitHub repository only.
+* [x] Root `README.md` present.
+* [x] `/data_pipeline` has the scraper, cleaning, SQLite schema, five SQL queries, outputs, and SQL/pandas JOIN comparison.
+* [x] `/analytics/titanic.csv` exists after running `01_eda.py`.
+* [x] Analytics report contains all required missing-value percentages, outlier counts, skewness, survival rates, exact six-column correlation matrix, two strongest correlations, four+ interpreted charts, and standardization check.
+* [x] Three classifiers use the same stratified split and leakage-safe preprocessing.
+* [x] Classification metrics, ROC/AUC, imbalance comparison, GridSearchCV and OOB score are recorded.
+* [x] Fare regression includes MAE, RMSE, R2, adjusted R2 and residual interpretation.
+* [x] `best_pipeline.joblib` contains preprocessing + estimator together and reloads successfully.
+* [x] All eight support documents are present.
+* [x] ChromaDB embeddings and LangGraph three-node flow work in mock mode.
+* [x] Pydantic output has `answer`, `sources`, and `confidence`.
+* [x] FastAPI `/ask` works.
+* [x] Two mock example responses are recorded by `run_examples.py`.
+* [x] Dockerfile builds and serves the API locally.
+* [x] Git history visibly contains the required feature branch and merge.
