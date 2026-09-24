@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.DS_Store
+.ipynb_checkpoints/
+analytics/plots/*.png
+support_assistant/chroma_db/
+support_assistant/data/chroma_db/
+*.egg-info/
